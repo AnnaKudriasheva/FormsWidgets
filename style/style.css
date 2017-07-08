@@ -1,0 +1,875 @@
+@font-face {
+    font-family: 'GothamBook';
+    src: url('../fonts/GothamBookRegular.otf');
+}
+
+@font-face {
+    font-family: 'GothamMedium';
+    src: url('../fonts/GothamMediumRegular.ttf');
+}
+
+@font-face {
+    font-family: 'GothamLight';
+    src: url('../fonts/GothamLightRegular.otf');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a:active, button:active,
+a:focus, button:focus {
+    outline: none;
+}
+
+body {
+    background-color: #d9d9d9;
+    font-family: 'GothamBook', sans-serif;
+}
+
+button {
+    cursor: pointer;
+}
+
+fieldset {
+    border: none;
+}
+
+.wrapper {
+    width: 960px;
+    margin: 30px auto;
+    padding-top: 60px;
+}
+
+.widget {
+    margin-bottom: 35px;
+    border-radius: 4px;
+    background-color: white;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.45);
+}
+
+.center-block {
+    margin: 30px auto;
+}
+
+.button {
+    text-align: center;
+    position: relative;
+}
+
+.red-button {
+    width: 100%;
+    margin: 0 auto;
+    padding: 21px 0;
+    background-color: #fb6362;
+    border: none;
+    border-radius: 4px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.7);
+    font-family: 'GothamBook', sans-serif;
+    font-size: 15px;
+    color: white;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    box-shadow: 0 1px 8px -2px rgba(0, 0, 0, 0.45);
+}
+
+.calendar-widget {
+    width: 345px;
+}
+
+.calendar-widget-header {
+    position: relative;
+    padding: 23px 38px;
+    border-radius: 4px 4px 0 0;
+    background-color: #404a58;
+    color: white;
+    text-align: center;
+}
+
+.calendar-widget-header h3 {
+    font-size: 17px;
+    letter-spacing: 0.04em;
+}
+
+.prev-month-btn {
+    position: absolute;
+    top: 40%;
+    left: 37px;
+    width: 8px;
+    height: 12px;
+    background: url('../images/arrows_sprites.png');
+    background-position: -1px -15px;
+}
+
+.next-month-btn {
+    position: absolute;
+    top: 40%;
+    right: 37px;
+    width: 8px;
+    height: 12px;
+    background: url('../images/arrows_sprites.png');
+    background-position: -1px -1px;
+}
+
+.calendar-widget-content {
+    padding: 25px 23px;
+}
+
+.calendar-widget-table {
+    padding: 1px 6px 21px 6px;
+}
+
+.calendar-widget-table thead td {
+    min-width: 39px;
+    max-width: 39px;
+    padding-bottom: 11px;
+    text-align: center;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+.calendar-widget-table thead {
+    font-family: 'GothamMedium', sans-serif;
+    font-size: 14px;
+    color: #404a58;
+}
+
+.calendar-widget-table tbody {
+    font-size: 14px;
+    color: #404a58;
+}
+
+.calendar-widget-table tbody td {
+    height: 39px;
+    text-align: center;
+}
+
+.calendar-widget-now-date {
+    background-color: #fb6362;
+    border-radius: 50%;
+    color: white;
+}
+
+.calendar-widget-isabled-date {
+    color: #c5c5c5;
+}
+
+.calendar-widget-event-date {
+    color: #fb6362;
+}
+
+.booking-widget {
+    width: 345px;
+}
+
+.booking-widget-header {
+    position: relative;
+    width: 100%;
+    height: 185px;
+    background: url("../images/booking_img.jpg") no-repeat;
+}
+
+.booking-widget-title {
+    position: absolute;
+    left: 22px;
+    bottom: 19px;
+}
+
+.booking-widget-hotel {
+    font-size: 25px;
+    color: white;
+    line-height: 1.6em;
+    letter-spacing: 0.02em;
+}
+
+.booking-widget-city {
+    position: relative;
+    padding-left: 22px;
+    font-family: 'GothamLight', sans-serif;
+    font-size: 14px;
+    color: white;
+    letter-spacing: 0.018em;
+}
+
+.booking-widget-city:before {
+    content: '';
+    position: absolute;
+    left: 3px;
+    width: 12px;
+    height: 17px;
+    background: url('../images/booking_sprites.png');
+    background-position: -10px -104px;
+}
+
+.booking-widget-form {
+    padding: 22px 24px 25px 24px;
+}
+
+.booking-widget-form label {
+    font-size: 14px;
+    color: #666666;
+    letter-spacing: 0.03em;
+}
+
+.number-input {
+    font-size: 17px;
+}
+
+input, .tagsinput {
+    margin: 8px 0 0 0;
+    border: none;
+    border-radius: 3px;
+    font-family: 'GothamLight', sans-serif;
+    font-size: 14px;
+    color: #404a58;
+    background-color: #f4f4f4;
+    box-shadow: inset 1px 2px 2px #cfcfcf;
+}
+
+input[type='text'] {
+    width: 100%;
+    height: 45px;
+    box-sizing: border-box;
+    padding: 0 40px 0 14px;
+}
+
+input::placeholder,
+textarea::placeholder {
+    font-family: 'GothamLight', sans-serif;
+    font-size: 14px;
+    letter-spacing: 0.03em;
+    color: #999898;
+}
+
+textarea {
+    width: 100%;
+    margin: 8px 0;
+    padding: 13px;
+    box-sizing: border-box;
+    background-color: #f4f4f4;
+    border-radius: 3px;
+    border: none;
+    resize: none;
+    box-shadow: inset 1px 2px 2px #cfcfcf;
+}
+
+.input-btn {
+    position: absolute;
+    right: 5px;
+    top: 31px;
+    width: 37px;
+    height: 37px;
+    background-color: #414b59;
+    border-radius: 1px;
+    border: none;
+}
+
+.booking-widget-form .button {
+    margin-top: 19px;
+}
+
+.calendar-btn:before {
+    content: '';
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 16px;
+    height: 16px;
+    background: url('../images/booking_sprites.png');
+    background-position: -10px -10px;
+}
+
+.dropdown-btn:before {
+    content: '';
+    position: absolute;
+    top: 16px;
+    right: 13px;
+    width: 10px;
+    height: 7px;
+    background: url('../images/booking_sprites.png');
+    background-position: -10px -77px;
+}
+
+.form-group {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.checkout {
+    margin-bottom: 18px;
+}
+
+.checkbox {
+    margin: 0 3px 0 0;
+    width: 17px;
+    height: 17px;
+    vertical-align: top;
+}
+
+.checkbox:not(checked) {
+    position: absolute;
+    opacity: 0;
+}
+
+.checkbox:not(checked) + label {
+    position: relative;
+    padding: 0 0 0 35px;
+}
+
+.checkbox:not(checked) + label:before {
+    content: '';
+    position: absolute;
+    top: -4px;
+    left: 0;
+    width: 23px;
+    height: 23px;
+    border-radius: 2px;
+    background: #f4f4f4;
+    box-shadow: inset 1px 2px 2px #cfcfcf;
+}
+
+.checkbox:not(checked) + label:after {
+    content: '';
+    display: none;
+}
+
+.checkbox:checked + label:after {
+    position: absolute;
+    top: 1px;
+    left: 4px;
+    display: block;
+    width: 16px;
+    height: 11px;
+    background: url('../images/booking_sprites.png');
+    background-position: -10px -46px;
+    transition: all .2s;
+}
+
+.input-group {
+    margin-top: 26px;
+}
+
+.input-group .form-group {
+    display: inline-block;
+    width: 47%;
+}
+
+.input-group .form-group:nth-child(1) {
+    float: left;
+}
+
+.input-group .form-group:nth-child(2) {
+    float: right;
+}
+
+.clearfix:after {
+    content: ".";
+    visibility: hidden;
+    display: block;
+    height: 0;
+    clear: both;
+}
+
+.search-text {
+    position: relative;
+    margin-left: 25px;
+}
+
+.search-text:before {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: -32px;
+    width: 22px;
+    height: 22px;
+    background: url('../images/booking_sprites.png');
+    background-position: -10px -141px;
+}
+
+.post-widget {
+    width: 792px;
+    font-size: 0;
+}
+
+.inline-elem {
+    vertical-align: top;
+    display: inline-block;
+}
+
+.post-widget-nav {
+    width: 72px;
+    height: 100%;
+    list-style-type: none;
+}
+
+.post-widget-nav li {
+    position: relative;
+    width: 100%;
+    height: 113px;
+    background-color: #404a58;
+    border-bottom: 1px solid #242931;
+}
+
+.post-widget-nav li:first-child {
+    border-radius: 4px 0 0 0;
+}
+
+.post-widget-nav li:last-child {
+    border-bottom: none;
+    border-radius: 0 0 0 4px;
+}
+
+.post-widget-nav .active {
+    background-color: #fb6362;
+    border-bottom: none;
+}
+
+.post-widget-nav-view {
+    position: absolute;
+    top: 47px;
+    left: 22px;
+    width: 28px;
+    height: 18px;
+    background: url('../images/post_sprites.png');
+    background-position: -10px -51px;
+}
+
+.post-widget-nav-location {
+    position: absolute;
+    top: 42px;
+    left: 28px;
+    width: 18px;
+    height: 26px;
+    background: url('../images/post_sprites.png');
+    background-position: -10px -131px;
+}
+
+.post-widget-nav-stars {
+    position: absolute;
+    top: 46px;
+    left: 24px;
+    width: 21px;
+    height: 20px;
+    background: url('../images/post_sprites.png');
+    background-position: -10px -177px;
+}
+
+.post-widget-content {
+    width: 356px;
+    padding: 28px 45px 35px 33px;
+    box-sizing: border-box;
+}
+
+.post-widget-title {
+    max-width: 200px;
+    margin-bottom: 9px;
+    font-family: 'GothamMedium', sans-serif;
+    font-size: 21px;
+    color: #4d4d4d;
+    line-height: 1.4em;
+}
+
+.post-widget-reviews {
+    margin-bottom: 30px;
+    font-family: 'GothamLight', sans-serif;
+    color: #999999;
+    font-size: 14px;
+    letter-spacing: 0.04em;
+}
+
+.post-widget-reviews span {
+    color: #4d4d4d;
+}
+
+.post-widget-info {
+    margin-bottom: 16px;
+    font-family: 'GothamLight', sans-serif;
+    font-size: 14px;
+    color: #999999;
+    line-height: 1.78em;
+    letter-spacing: 0.0119em;
+}
+
+.post-widget-read-more {
+    text-decoration: none;
+    font-size: 14px;
+    color: #fb6362;
+    letter-spacing: 0.019em;
+}
+
+.post-widget-img {
+    position: relative;
+    /* width: 364px; */
+}
+
+.post-widget-img img {
+    width: 364px;
+    height: 340px;
+}
+
+.triangle-figure {
+    position: absolute;
+    top: 38px;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-top: 22px solid transparent;
+    border-left: 22px solid white;
+    border-bottom: 22px solid transparent;
+}
+
+.post-widget-img-stats {
+    position: absolute;
+    bottom: 24px;
+    right: 29px;
+}
+
+.post-widget-img-comments,
+.post-widget-img-likes {
+    font-size: 17px;
+    color: white;
+}
+
+.post-widget-img-comments {
+    margin-right: 54px;
+}
+
+.post-widget-img-comments:before {
+    position: absolute;
+    top: -2px;
+    left: -35px;
+    content: '';
+    width: 25px;
+    height: 21px;
+    background: url("../images/post_sprites.png");
+    background-position: -10px -10px;
+}
+
+.post-widget-img-likes:before {
+    position: absolute;
+    top: -2px;
+    left: 49px;
+    content: '';
+    width: 25px;
+    height: 22px;
+    background: url("../images/post_sprites.png");
+    background-position: -10px -89px;
+}
+
+.email-widget {
+    box-sizing: border-box;
+    width: 380px;
+    padding: 17px 25px 26px 25px;
+}
+
+.email-widget .form-group {
+    margin-bottom: 17px;
+}
+
+.tagsinput {
+    width: 100%;
+    height: 45px;
+    box-sizing: border-box;
+    padding: 4px 40px 0 4px;
+}
+
+.tagsinput > span {
+    position: relative;
+    display: inline-block;
+    padding: 11px 26px 10px 12px;
+    font-family: 'GothamBook', sans-serif;
+    font-size: 14px;
+    background-color: #404a58;
+    color: white;
+    letter-spacing: 0.02em;
+}
+
+.tagsinput input {
+    display: inline-block;
+    height: 30px;
+    min-width: 40px;
+    max-width: 90px;
+    border: none;
+    box-shadow: none;
+    outline: none;
+    padding: 0;
+    margin: 0;
+}
+
+.tagsinput-remove {
+    position: absolute;
+    right: 9px;
+    top: 15px;
+    width: 8px;
+    height: 8px;
+    background: url('../images/email_sprites.png');
+    background-position: -10px -86px;
+}
+
+.add-email-btn {
+    position: absolute;
+    top: 15px;
+    right: 13px;
+    width: 16px;
+    height: 16px;
+    background: url('../images/email_sprites.png');
+    background-position: -10px -10px;
+    border: none;
+}
+
+.add-file-btn {
+    position: absolute;
+    top: 22px;
+    right: 13px;
+    width: 21px;
+    height: 20px;
+    background: url('../images/email_sprites.png');
+    background-position: -10px -46px;
+    border: none;
+}
+
+.upload {
+    position: absolute;
+    top: -4px;
+    right: -2px;
+    width: 26px;
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    cursor: pointer;
+    opacity: 0;
+}
+
+.send-btn {
+    float: right;
+    width: 127px;
+    margin-top: -1px;
+}
+
+.send-btn button {
+    padding: 16px 0;
+}
+
+.chart-widget {
+    width: 790px;
+    box-sizing: border-box;
+    padding: 52px 47px 40px 40px;
+}
+
+.chart-widget ul {
+    list-style-type: none;
+    font-size: 0;
+}
+
+.chart-widget-field {
+    position: relative;
+}
+
+.chart-widget-value {
+    position: absolute;
+    bottom: 0;
+    left: 63px;
+}
+
+.chart-widget-value li {
+    position: relative;
+    display: inline-block;
+    width: 55px;
+    margin-right: 35px;
+    border-radius: 3px;
+    background-color: #fb6362;
+}
+
+@keyframes riseMonValue {
+    0% {
+        height: 0;
+    }
+    100% {
+        height: 49px;
+    }
+}
+
+@keyframes riseTuesValue {
+    0% {
+        height: 0;
+    }
+    100% {
+        height: 62px;
+    }
+}
+
+@keyframes riseWedValue {
+    0% {
+        height: 0;
+    }
+    100% {
+        height: 119px;
+    }
+}
+
+@keyframes riseThuValue {
+    0% {
+        height: 0;
+    }
+    100% {
+        height: 158px;
+    }
+}
+
+@keyframes riseFriValue {
+    0% {
+        height: 0;
+    }
+    100% {
+        height: 129px;
+    }
+}
+
+@keyframes riseSatValue {
+    0% {
+        height: 0;
+    }
+    100% {
+        height: 169px;
+    }
+}
+
+@keyframes riseSunValue {
+    0% {
+        height: 0;
+    }
+    100% {
+        height: 143px;
+    }
+}
+
+.mon-value {
+    -webkit-animation: riseMonValue 1.5s;
+    -moz-animation: riseMonValue 1.5s;
+    -o-animation: riseMonValue 1.5s;
+    animation: riseMonValue 1.5s;
+    animation-fill-mode: forwards;
+}
+
+.tues-value {
+    -webkit-animation: riseTuesValue 1.5s;
+    -moz-animation: riseTuesValue 1.5s;
+    -o-animation: riseTuesValue 1.5s;
+    animation: riseTuesValue 1.5s;
+    animation-fill-mode: forwards;
+}
+
+.wed-value {
+    -webkit-animation: riseWedValue 1.5s;
+    -moz-animation: riseWedValue 1.5s;
+    -o-animation: riseWedValue 1.5s;
+    animation: riseWedValue 1.5s;
+    animation-fill-mode: forwards;
+}
+
+.thu-value {
+    -webkit-animation: riseThuValue 1.5s;
+    -moz-animation: riseThuValue 1.5s;
+    -o-animation: riseThuValue 1.5s;
+    animation: riseThuValue 1.5s;
+    animation-fill-mode: forwards;
+}
+
+.fri-value {
+    -webkit-animation: riseFriValue 1.5s;
+    -moz-animation: riseFriValue 1.5s;
+    -o-animation: riseFriValue 1.5s;
+    animation: riseFriValue 1.5s;
+    animation-fill-mode: forwards;
+}
+
+.sat-value {
+    -webkit-animation: riseSatValue 1.5s;
+    -moz-animation: riseSatValue 1.5s;
+    -o-animation: riseSatValue 1.5s;
+    animation: riseSatValue 1.5s;
+    animation-fill-mode: forwards;
+}
+
+.sun-value {
+    -webkit-animation: riseSunValue 1.5s;
+    -moz-animation: riseSunValue 1.5s;
+    -o-animation: riseSunValue 1.5s;
+    animation: riseSunValue 1.5s;
+    animation-fill-mode: forwards;
+}
+
+.chart-widget-value li:last-child {
+    margin-right: 0;
+}
+
+.chart-widget-y li {
+    width: 100%;
+    border-bottom: 1px solid #eaeaea;
+    text-align: left;
+    font-family: 'GothamMedium', sans-serif;
+    font-size: 12px;
+    color: #666666;
+    padding-top: 55px;
+    padding-bottom: 2px;
+}
+
+.chart-widget-y li:first-child {
+    padding-top: 0;
+}
+
+.chart-widget-x {
+    padding-top: 11px;
+    padding-left: 63px;
+    padding-right: 40px;
+}
+
+.chart-widget-x li {
+    display: inline-block;
+    font-family: 'GothamMedium', sans-serif;
+    font-size: 12px;
+    color: #666666;
+    width: 55px;
+    text-align: center;
+    margin-right: 35px;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+.chart-widget-x li:last-child {
+    margin-right: 0;
+}
+
+.chart-widget-tooltip {
+    display: none;
+    transition-duration: 3s;
+}
+
+.chart-widget-value li:hover .chart-widget-tooltip {
+    position: absolute;
+    top: -45px;
+    display: block;
+    text-align: center;
+    width: 55px;
+    padding: 9px;
+    box-sizing: border-box;
+    border-radius: 3px;
+    font-family: 'GothamMedium', sans-serif;
+    font-size: 12px;
+    color: white;
+    background-color: #404a58;
+    transition-duration: 3s;
+}
+
+.chart-widget-tooltip:before {
+    content: '';
+    position: absolute;
+    left: 17px;
+    top: 27px;
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid #404a58;
+}

@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Forms&Widgets</title>
+    <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+<div class="wrapper">
+    <section id="calendar-widget" class="widget calendar-widget center-block">
+        <div class="calendar-widget-header">
+            <span id="prev-month-btn" class="prev-month-btn"></span>
+            <h3><span id="month">May</span> 2014</h3>
+            <span id="next-month-btn" class="next-month-btn"></span>
+        </div>
+        <div class="calendar-widget-content">
+            <table class="calendar-widget-table">
+                <thead>
+                <tr>
+                    <td>Sun</td>
+                    <td>Mon</td>
+                    <td>Tue</td>
+                    <td>Wed</td>
+                    <td>Thu</td>
+                    <td>Fri</td>
+                    <td>Sat</td>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td class="calendar-widget-disabled-date">29</td>
+                    <td class="calendar-widget-disabled-date">30</td>
+                    <td>1</td>
+                    <td>2</td>
+                    <td class="calendar-widget-now-date">3</td>
+                    <td>4</td>
+                    <td>5</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td class="calendar-widget-event-date">7</td>
+                    <td>8</td>
+                    <td>9</td>
+                    <td>10</td>
+                    <td>11</td>
+                    <td>12</td>
+                </tr>
+                <tr>
+                    <td>13</td>
+                    <td>14</td>
+                    <td>15</td>
+                    <td>16</td>
+                    <td>17</td>
+                    <td>18</td>
+                    <td>19</td>
+                </tr>
+                <tr>
+                    <td>20</td>
+                    <td>21</td>
+                    <td>22</td>
+                    <td class="calendar-widget-event-date">23</td>
+                    <td>24</td>
+                    <td>25</td>
+                    <td>26</td>
+                </tr>
+                <tr>
+                    <td>27</td>
+                    <td>28</td>
+                    <td>29</td>
+                    <td>30</td>
+                    <td class="calendar-widget-disabled-date">1</td>
+                    <td class="calendar-widget-disabled-date">2</td>
+                    <td class="calendar-widget-disabled-date">3</td>
+                </tr>
+                </tbody>
+            </table>
+            <div class="button">
+                <button class="red-button">ADD EVENT</button>
+            </div>
+        </div>
+    </section>
+    <section id="booking-widget" class="widget booking-widget center-block">
+        <div class="booking-widget-header">
+            <div class="booking-widget-title">
+                <h3 id="booking-widget-hotel" class="booking-widget-hotel">
+                    Hotel Relais
+                </h3>
+                <h4 id="booking-widget-city" class="booking-widget-city">
+                    Paris, France
+                </h4>
+            </div>
+        </div>
+        <form action="" method="GET" id="booking-widget-form"
+              class="booking-widget-form">
+            <fieldset>
+                <div class="form-group">
+                    <label for="check-in">Check in</label>
+                    <input type="text" id="check-in"
+                           placeholder="9 July, 2016" disabled>
+                    <button type="button" class="input-btn calendar-btn">
+                    </button>
+                </div>
+                <div class="form-group checkout">
+                    <label for="check-out">Check out</label>
+                    <input type="text" id="check-out"
+                           placeholder="16 July, 2016" disabled>
+                    <button type="button" class="input-btn calendar-btn">
+                    </button>
+                </div>
+                <div class="form-group">
+                    <input id="flexible" type="checkbox" class="checkbox"
+                           checked>
+                    <label for="flexible">Flexible dates</label>
+                </div>
+                <div class="input-group clearfix">
+                    <div class="form-group">
+                        <div class="inline-group">
+                            <label for="adults">Adults</label>
+                            <input type="text" id="adults" value="2"
+                                   class="number-input">
+                            <button type="button" class="input-btn
+                                 dropdown-btn">
+                            </button>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="inline-group">
+                            <label for="children">Children</label>
+                            <input type="text" id="children" value="1"
+                                   class="number-input">
+                            <button type="button" class="input-btn
+                                dropdown-btn">
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="button">
+                    <button class="red-button search">
+                        <span class="search-text">SEARCH ROOMS</span>
+                    </button>
+                </div>
+            </fieldset>
+        </form>
+    </section>
+    <section id="post-widget" class="widget post-widget center-block">
+        <article class="inline-elem">
+            <ul class="post-widget-nav">
+                <li class="active">
+                    <span class="post-widget-nav-view"></span>
+                </li>
+                <li>
+                    <span class="post-widget-nav-location"></span>
+                </li>
+                <li>
+                    <span class="post-widget-nav-stars"></span>
+                </li>
+            </ul>
+        </article>
+        <article class="inline-elem post-widget-content">
+            <h3 class="post-widget-title">
+                My most favourite place in the world
+            </h3>
+            <p class="post-widget-reviews">
+                <span>154</span> Reviews
+            </p>
+            <p class="post-widget-info">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Maecenas a pulvinar ipsum. Aliquam sit amet iaculis dolor.
+                Vivamus sed diam sollicitudin.
+            </p>
+            <a href="#" class="post-widget-read-more">
+                Read more
+            </a>
+        </article>
+        <article class="inline-elem post-widget-img">
+            <span class="triangle-figure"></span>
+            <img src="images/post_img.jpg">
+            <div class="post-widget-img-stats">
+                <span class="post-widget-img-comments">752</span>
+                <span class="post-widget-img-likes">2709</span>
+            </div>
+        </article>
+    </section>
+    <section id="email-widget" class="widget email-widget center-block">
+        <form action="" method="GET" class="clearfix">
+            <fieldset>
+                <div class="form-group">
+                    <div class="tagsinput">
+                            <span>rick.james@mail.com
+                                <span class="tagsinput-remove"></span>
+                            </span>
+                        <label for="email"></label>
+                        <input type="text" id="email">
+                    </div>
+                    <button type="button" class="add-email-btn"></button>
+                </div>
+                <div class="form-group">
+                    <label for="subject"></label>
+                    <input type="text" id="subject" placeholder="Subject">
+                    <button type="button" class="add-file-btn">
+                        <input type="file" name="file" class="upload">
+                    </button>
+                </div>
+                <div class="form-group">
+                    <label for="message"></label>
+                    <textarea rows="15" cols="1"
+                              id="message" placeholder="Message"></textarea>
+                </div>
+                <div class="send-btn">
+                    <div class="button">
+                        <button type="submit" class="red-button">
+                            SEND
+                        </button>
+                    </div>
+                </div>
+            </fieldset>
+        </form>
+    </section>
+    <section class="widget chart-widget center-block">
+        <div class="chart">
+            <div class="chart-widget-field">
+                <ul class="chart-widget-y">
+                    <li>40</li>
+                    <li>30</li>
+                    <li>20</li>
+                    <li>0</li>
+                </ul>
+                <ul class="chart-widget-value">
+                    <li class="mon-value">
+                        <span class="chart-widget-tooltip">17</span>
+                    </li>
+                    <li class="tues-value" value="30">
+                        <span class="chart-widget-tooltip">34</span>
+                    </li>
+                    <li class="wed-value">
+                        <span class="chart-widget-tooltip">34</span>
+                    </li>
+                    <li class="thu-value">
+                        <span class="chart-widget-tooltip">34</span>
+                    </li>
+                    <li class="fri-value">
+                        <span class="chart-widget-tooltip">34</span>
+                    </li>
+                    <li class="sat-value">
+                        <span class="chart-widget-tooltip">34</span>
+                    </li>
+                    <li class="sun-value">
+                        <span class="chart-widget-tooltip">34</span>
+                    </li>
+                </ul>
+            </div>
+            <ul class="chart-widget-x">
+                <li>Mon</li>
+                <li>Tues</li>
+                <li>Wed</li>
+                <li>Thu</li>
+                <li>Fri</li>
+                <li>Sat</li>
+                <li>Sun</li>
+            </ul>
+        </div>
+    </section>
+</div>
+</body>
+</html>
